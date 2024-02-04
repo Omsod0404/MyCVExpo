@@ -17,7 +17,6 @@ const colorsPalette = {
 };
 
 const App = () => {
-  const lista = ['html.png','css.png','js.png','java.png','csharp.png','python.png','php.png','oracle.png','node.png','express.png','visual.png','react.png','jira.jpg','git.png','github.png'];
 
   const [fontsLoaded] = useFonts({
     'Poppins-Regular': require('./assets/fonts/Poppins-Regular.ttf'),
