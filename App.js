@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 const imageBackground = require('./img/fondo.jpg');
 const imageUser = require('./img/fotoalumno.jpg');
 
+
 const colorsPalette = {
   primaryColor: '#4F276F',
   secondaryColor: '#0f6b6f',
@@ -16,6 +17,8 @@ const colorsPalette = {
 };
 
 const App = () => {
+  const lista = ['html.png','css.png','js.png','java.png','csharp.png','python.png','php.png','oracle.png','node.png','express.png','visual.png','react.png','jira.jpg','git.png','github.png'];
+
   const [fontsLoaded] = useFonts({
     'Poppins-Regular': require('./assets/fonts/Poppins-Regular.ttf'),
     'Poppins-Bold': require('./assets/fonts/Poppins-Bold.ttf'),
@@ -30,28 +33,41 @@ const App = () => {
         <View style = {styles.header}>
           <Image source={imageUser} style={styles.imageUser}></Image>
           <View style={styles.headerText}>
-            <Text style={styles.headerName}>Omar García Martínez</Text>
-            <Text style={styles.headerCareer}>Ingeniero en Software</Text>
+            <Text style={styles.headerName}>Omar García Martínez{'\n'}Ingeniero en Software</Text>
           </View>
         </View>
         <ScrollView style={styles.scrollContent}>
-          <View style={styles.perfil}>
-            <Text style={styles.perfiltext}>Perfil profesional</Text>
-            <Text style={styles.perfilexp}>Mi preparación y experiencia</Text>
-            <Text style={styles.perfilexpt}>Mi participación dentro de los proyectos fue tanto parte del Front-End como del Back-End usando diferentes tecnologías para el desarrollo de aplicaciones de escritorio, móvil y web con poco más de dos años de experiencia.{'\n\n'}
+          <View style={styles.section}>
+            <Text style={styles.sectionTittle}>Perfil profesional</Text>
+            <Text style={styles.sectionSubT}>Mi preparación y experiencia</Text>
+            <Text style={styles.sectionText}>Mi participación dentro de los proyectos fue tanto parte del Front-End como del Back-End usando diferentes tecnologías para el desarrollo de aplicaciones de escritorio, móvil y web con poco más de dos años de experiencia.{'\n\n'}
             <Text style={styles.year}>2022{'\n'}</Text>Participe en el diseño de una aplicación inmobiliaria, y en la espeficicacion de sus requerimientos funcionales y no funcionales. Participe en el desarrollo de una aplicación de inventarios de escritorio implementando una base de datos.{'\n\n'}
             <Text style={styles.year}>2023{'\n'}</Text>Participe en el diseño y funcionalidad de una tienda web. Participe en el desarrollo de una pagina web para el registro de alumnos, asi como en el desarrolo de su base de datos. Forme parte de un proyecto para la implementación de una red LAN. Desarrolle una API para acceder a una base de datos de personal de una empresa implementando JWT. Forme parte de un equipo en el cual realizamos tres proyectos: encriptacion de imagenes, desarrollo de una aplicacion de chats y el desarrollo de un cluster para el procesamiento de videos.
             </Text>
           </View>
-          <View style={styles.perfil2}>
-            <Text style={styles.perfilexp2}>Mi formación academica</Text>
-            <Text style={styles.perfilexpt2}>Forge mis estudios en la Carrera de Ingenieria de Software, Plan 2018, de la Facultad de Informática de la Universidad Autonóma de Querétaro.</Text>
+          <View style={styles.section2}>
+            <Text style={styles.sectionSubT2}>Mi formación academica</Text>
+            <Text style={styles.sectionText2}>Forge mis estudios en la Carrera de Ingenieria de Software, Plan 2018, de la Facultad de Informática de la Universidad Autonóma de Querétaro.</Text>
           </View>
-          <View style={styles.perfil3}>
-          <Text style={styles.perfilexp2}>Tecnologías y lenguajes de programación usados</Text>
-          <View style={styles.iconSet}>
-
-          </View>
+          <View style={styles.section3}>
+          <Text style={styles.sectionSubT2}>Tecnologías y lenguajes de programación usados</Text>
+            <View style={styles.logosSet}>
+              <Image source={require('./img/logos/html.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/css.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/js.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/java.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/csharp.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/python.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/php.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/oracle.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/node.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/express.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/visual.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/react.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/jira.jpg')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/git.png')} style={styles.logos}></Image>
+              <Image source={require('./img/logos/github.png')} style={styles.logos}></Image>
+            </View>
           </View>
         </ScrollView>
       </ImageBackground>
@@ -99,14 +115,6 @@ const styles = StyleSheet.create({
   headerName:{
     color: colorsPalette.back1Color,
     fontSize: 20,
-    width: '100%',
-    textAlign: 'center',
-    fontFamily: 'Poppins-Bold'
-  },
-  headerCareer:{
-    color: colorsPalette.back1Color,
-    fontSize: 20,
-    width: '100%',
     textAlign: 'center',
     fontFamily: 'Poppins-Bold'
   },
@@ -114,21 +122,21 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: colorsPalette.transparent
   },
-  perfil:{
+  section:{
     backgroundColor: colorsPalette.back1Color,
     width: '100%',
     height: 'auto'
   },
-  perfil2:{
+  section2:{
     backgroundColor: colorsPalette.back2Color,
     width: '100%',
     height: 'auto'
   },
-  perfil3:{
+  section3:{
     width: '100%',
     height: 'auto'
   },
-  perfiltext:{
+  sectionTittle:{
     fontFamily: 'Poppins-Bold',
     width: 'auto',
     textAlign: 'center',
@@ -136,7 +144,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: colorsPalette.primaryColor
   },
-  perfilexp:{
+  sectionSubT:{
     fontFamily: 'Poppins-Bold',
     width: 'auto',
     textAlign: 'center',
@@ -144,7 +152,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: colorsPalette.secondaryColor
   },
-  perfilexp2:{
+  sectionSubT2:{
     fontFamily: 'Poppins-Bold',
     width: 'auto',
     textAlign: 'center',
@@ -153,7 +161,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: colorsPalette.alter1Color
   },
-  perfilexpt:{
+  sectionText:{
     fontFamily: 'Poppins-Regular',
     width: 'auto',
     margin: 6,
@@ -161,7 +169,7 @@ const styles = StyleSheet.create({
     color: colorsPalette.fontColor,
     textAlign: 'justify'
   },
-  perfilexpt2:{
+  sectionText2:{
     fontFamily: 'Poppins-Regular',
     width: 'auto',
     margin: 6,
@@ -171,6 +179,21 @@ const styles = StyleSheet.create({
   },
   year:{
     fontFamily: 'Poppins-Bold'
+  },
+  logosSet:{
+    width:'100%',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    marginBottom: 10,
+  },
+  logos:{
+    height: 60,
+    width: 60,
+    resizeMode: 'contain',
+    borderRadius: 15,
+    margin: 5
   }
 });
 
