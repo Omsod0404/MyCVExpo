@@ -69,6 +69,51 @@ const App = () => {
               <Image source={require('./img/logos/github.png')} style={styles.logos}></Image>
             </View>
           </View>
+          <View style={styles.section}>
+          <Text style={styles.sectionSubT}>Mis aptitudes</Text>
+            <Text style={styles.sectionText}>
+              -- Capacidad de realizar un Diseño Centrado en el Usuario.{'\n'}
+              -- Trabajo colaborativo.{'\n'}
+              -- Adaptación a nuevos entornos de trabajo.{'\n'}
+              -- Creación de código.{'\n'}
+              -- Documentación de desarrollos.{'\n'}
+              -- Capacidad analítica.{'\n'}
+              -- Resolución de problemas.{'\n'}
+              -- Nivel de inglés A2-B1.{'\n'}
+            </Text>
+          </View>
+          <View style={styles.section2}>
+            <Text style={styles.sectionTittle2}>Información personal</Text>
+            <Text style={styles.sectionSubT2}>Sobre mi</Text>
+            <Text style={styles.sectionText2}>
+              Algunas de las razones por las que decidi estudiar esta carrera es porque considero que el mundo informático ha estado en su auge desde los últimos 10 años , y una de sus ramas más importantes es la Ingeniería de Software, la cual es la que llamo mi atención, debido a que es un ambito al que se le pueden seguir nuevos ambitos en el mercado y se pueden mejorar algunos ambitos de igual manera.
+            </Text>
+            <Text style={styles.sectionSubT2}>Perfil</Text>
+            <Text style={styles.sectionText2}>
+              Nací el 4 de abril de 2003 en la ciudad de Querétaro, Querétaro. Actualmente tengo 20 años de edad.
+            </Text>
+            <Text style={styles.sectionSubT2}>Ubicación</Text>
+            <Text style={styles.sectionText2}>
+              Actualmente me encuentro viviendo en la ciudad de Querétaro, Querétaro, mi dirección es Av. Agustín González Medina, Cond. Hugo Gutierrez #4801, Int.65, Fraccionamiento Loarca, 76118.
+            </Text>
+            <Text style={styles.sectionSubT2}>Intereses</Text>
+            <Text style={styles.sectionText2}>
+              A pesar de que esta rama de la imformatica tiene un gran campo laboral en diversos ambitos, yo siempre me enfoque hacia el ambito automotriz o hacia el ambito de la música ya que son las dos cosas que me apasionan despues de esta.
+            </Text>
+          </View>
+          <View style={styles.section}>
+            <Text style={styles.sectionTittle}>Contacto</Text>
+            <View style={styles.contacto}>
+              <View style={styles.contactoSub}> 
+                <Text style={styles.sectionSubT}>Teléfono</Text>
+                <Text style={styles.sectionText3}>+52 446-110-0926</Text>
+              </View>
+              <View style={styles.contactoSub}> 
+                <Text style={styles.sectionSubT}>Correo</Text>
+                <Text style={styles.sectionText3}>garciaomarucho@gmail.com</Text>
+              </View>
+            </View>
+          </View>
         </ScrollView>
       </ImageBackground>
     </View>
@@ -144,11 +189,20 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: colorsPalette.primaryColor
   },
+  sectionTittle2:{
+    fontFamily: 'Poppins-Bold',
+    width: 'auto',
+    textAlign: 'center',
+    margin: 4,
+    fontSize: 20,
+    color: colorsPalette.alter2Color
+  },
   sectionSubT:{
     fontFamily: 'Poppins-Bold',
     width: 'auto',
     textAlign: 'center',
     marginBottom: 4,
+    marginTop: 20,
     fontSize: 16,
     color: colorsPalette.secondaryColor
   },
@@ -156,7 +210,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     width: 'auto',
     textAlign: 'center',
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 4,
     fontSize: 16,
     color: colorsPalette.alter1Color
@@ -177,6 +231,14 @@ const styles = StyleSheet.create({
     color: colorsPalette.back1Color,
     textAlign: 'justify'
   },
+  sectionText3:{
+    fontFamily: 'Poppins-Regular',
+    width: 'auto',
+    margin: 6,
+    fontSize: 12,
+    color: colorsPalette.fontColor,
+    textAlign: 'center'
+  },
   year:{
     fontFamily: 'Poppins-Bold'
   },
@@ -194,6 +256,11 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     borderRadius: 15,
     margin: 5
+  },
+  contacto:{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
   }
 });
 
